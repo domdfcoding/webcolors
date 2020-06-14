@@ -24,41 +24,41 @@ ensure that converting an integer rgb() triplet to percentage and back
 returns the original integer values, for consistency.
 
 """
-
+# stdlib
 import unittest
 
+# this package
 import webcolors
 
 
 def hex_colors():
-    HEX_TEMPLATE = "#%06x"
-    for i in range(16777217):
-        yield HEX_TEMPLATE % i
+	HEX_TEMPLATE = "#%06x"
+	for i in range(16777217):
+		yield HEX_TEMPLATE % i
 
 
 def int_colors():
-    red_counter = tuple(range(256))
-    green_counter = tuple(range(256))
-    blue_counter = tuple(range(256))
-    for red_value in red_counter:
-        for green_value in green_counter:
-            for blue_value in blue_counter:
-                yield (red_value, green_value, blue_value)
+	red_counter = tuple(range(256))
+	green_counter = tuple(range(256))
+	blue_counter = tuple(range(256))
+	for red_value in red_counter:
+		for green_value in green_counter:
+			for blue_value in blue_counter:
+				yield (red_value, green_value, blue_value)
 
 
 class FullColorTest(unittest.TestCase):
-    def test_full_colors(self):
-        for hex_color, int_triplet in zip(hex_colors(), int_colors()):
-            assert int_triplet == webcolors.hex_to_rgb(hex_color)
-            assert hex_color == webcolors.rgb_to_hex(int_triplet)
 
-    def test_triplet_conversion(self):
-        for int_triplet in int_colors():
-            conversion = webcolors.rgb_percent_to_rgb(
-                webcolors.rgb_to_rgb_percent(int_triplet)
-            )
-            assert int_triplet == conversion
+	def test_full_colors(self):
+		for hex_color, int_triplet in zip(hex_colors(), int_colors()):
+			assert int_triplet == webcolors.hex_to_rgb(hex_color)
+			assert hex_color == webcolors.rgb_to_hex(int_triplet)
+
+	def test_triplet_conversion(self):
+		for int_triplet in int_colors():
+			conversion = webcolors.rgb_percent_to_rgb(webcolors.rgb_to_rgb_percent(int_triplet))
+			assert int_triplet == conversion
 
 
 if __name__ == "__main__":
-    unittest.main()
+	unittest.main()

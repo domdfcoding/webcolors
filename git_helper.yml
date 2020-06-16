@@ -19,6 +19,7 @@ exclude_files:
   - rtfd
   - setup
   - manifest
+  - bumpversion
 
 python_deploy_version: 3.6
 

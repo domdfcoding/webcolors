@@ -1,6 +1,10 @@
 # Stubs for webcolors
 # https://github.com/ubernostrum/webcolors
 
+# Copyright (c) 2020, Dominic Davis-Foster
+# Copyright (c) 2008-2020, James Bennett
+# BSD Licensed
+
 # stdlib
 from typing import Dict, NamedTuple, Pattern, Tuple, Union
 
@@ -17,7 +21,7 @@ CSS2: str = "css2"
 CSS21: str = "css21"
 CSS3: str = "css3"
 
-SUPPORTED_SPECIFICATIONS: Tuple[str, ...] = (HTML4, CSS2, CSS21, CSS3)
+SUPPORTED_SPECIFICATIONS: Tuple[str, str, str, str] = (HTML4, CSS2, CSS21, CSS3)
 
 SPECIFICATION_ERROR_TEMPLATE: str
 
@@ -69,57 +73,19 @@ CSS3_HEX_TO_NAMES: Dict[str, str]
 # Normalization functions.
 #################################################################
 
-def normalize_hex(hex_value: str) -> str:
-	"""
-    Normalize a hexadecimal color value to 6 digits, lowercase.
-
-    """
-	match = HEX_COLOR_RE.match(hex_value)
-	if match is None:
-		raise ValueError(f"'{hex_value}' is not a valid hexadecimal color value.")
-	hex_digits = match.group(1)
-	if len(hex_digits) == 3:
-		hex_digits = "".join(2 * s for s in hex_digits)
-	return f"#{hex_digits.lower()}"
+def normalize_hex(hex_value: str) -> str: ...
 
 
-def _normalize_integer_rgb(value: int) -> int:
-	"""
-    Internal normalization function for clipping integer values into
-    the permitted range (0-255, inclusive).
-
-    """
-	return 0 if value < 0 else 255 if value > 255 else value
+def _normalize_integer_rgb(value: int) -> int: ...
 
 
-def normalize_integer_triplet(rgb_triplet: IntTuple) -> IntegerRGB:
-	"""
-    Normalize an integer ``rgb()`` triplet so that all values are
-    within the range 0-255 inclusive.
-
-    """
-	return IntegerRGB._make(_normalize_integer_rgb(value) for value in rgb_triplet)
+def normalize_integer_triplet(rgb_triplet: IntTuple) -> IntegerRGB: ...
 
 
-def _normalize_percent_rgb(value: str) -> str:
-	"""
-    Internal normalization function for clipping percent values into
-    the permitted range (0%-100%, inclusive).
-
-    """
-	value = value.split("%")[0]
-	percent = float(value) if "." in value else int(value)
-
-	return "0%" if percent < 0 else "100%" if percent > 100 else f"{percent}%"
+def _normalize_percent_rgb(value: str) -> str: ...
 
 
-def normalize_percent_triplet(rgb_triplet: PercentTuple) -> PercentRGB:
-	"""
-    Normalize a percentage ``rgb()`` triplet so that all values are
-    within the range 0%-100% inclusive.
-
-    """
-	return PercentRGB._make(_normalize_percent_rgb(value) for value in rgb_triplet)
+def normalize_percent_triplet(rgb_triplet: PercentTuple) -> PercentRGB: ...
 
 
 # Conversions from color names to various formats.

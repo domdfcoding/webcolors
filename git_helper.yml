@@ -4,7 +4,7 @@ import_name: webcolors
 copyright_years: "2020"
 author: "Dominic Davis-Foster"
 email: "dominic@davis-foster.co.uk"
-version: "0.0.1"
+version: "0.0.2"
 username: "domdfcoding"
 license: 'BSD'
 short_desc: 'PEP 561 based Type information for webcolors.'

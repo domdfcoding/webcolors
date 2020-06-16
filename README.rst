@@ -64,7 +64,7 @@ webcolors-stubs
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/webcolors-stubs
 	:alt: GitHub top language
 
-.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/webcolors-stubs/v0.0.1
+.. |commits-since| image:: https://img.shields.io/github/commits-since/domdfcoding/webcolors-stubs/v0.0.2
 	:target: https://github.com/domdfcoding/webcolors-stubs/pulse
 	:alt: GitHub commits since tagged version
 

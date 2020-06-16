@@ -40,3 +40,8 @@ classifiers:
   - 'Operating System :: OS Independent'
   - 'Topic :: Utilities'
   - "Environment :: Web Environment"
+
+keywords:
+  - webcolors
+  - css
+  - type-stubs

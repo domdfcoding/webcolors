@@ -33,7 +33,7 @@ webcolors-stubs
 	:target: https://requires.io/github/domdfcoding/webcolors-stubs/requirements/?branch=master
 	:alt: Requirements Status
 
-.. |coveralls| image:: https://shields.io/coveralls/github/domdfcoding/webcolors-stubs/master?logo=coveralls
+.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/webcolors-stubs/master?logo=coveralls
 	:target: https://coveralls.io/github/domdfcoding/webcolors-stubs?branch=master
 	:alt: Coverage
 

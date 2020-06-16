@@ -79,6 +79,7 @@ classifiers = [
 		'Intended Audience :: Developers',
 		'Operating System :: OS Independent',
 		'Topic :: Utilities',
+		'Environment :: Web Environment',
 		'Programming Language :: Python :: 3.6',
 		'Programming Language :: Python :: Implementation :: CPython',
 		'Programming Language :: Python :: 3.7',
@@ -89,4 +90,4 @@ classifiers = [
 
 		]
 
-keywords = ""
+keywords = "webcolors css type-stubs"

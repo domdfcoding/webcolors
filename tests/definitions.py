@@ -8,9 +8,9 @@ import re
 import unittest
 
 # 3rd party
-import html5lib  # noqa: F401
+import html5lib  # type: ignore  # noqa: F401
 import requests
-from bs4 import BeautifulSoup
+from bs4 import BeautifulSoup  # type: ignore
 
 # this package
 import webcolors

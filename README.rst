@@ -10,7 +10,7 @@ webcolors-stubs
 ``webcolors`` is a module for working with HTML/CSS color definitions.
 
 
-.. start shields 
+.. start shields
 
 .. list-table::
 	:stub-columns: 1
@@ -55,7 +55,7 @@ webcolors-stubs
 	:target: https://pypi.org/project/webcolors-stubs/
 	:alt: PyPI - Package Version
 
-.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/webcolors-stubs
+.. |supported-versions| image:: https://img.shields.io/pypi/pyversions/webcolors-stubs?logo=python&logoColor=white
 	:target: https://pypi.org/project/webcolors-stubs/
 	:alt: PyPI - Supported Python Versions
 
@@ -68,8 +68,8 @@ webcolors-stubs
 	:alt: PyPI - Wheel
 
 .. |license| image:: https://img.shields.io/github/license/domdfcoding/webcolors-stubs
-	:alt: License
 	:target: https://github.com/domdfcoding/webcolors-stubs/blob/master/LICENSE
+	:alt: License
 
 .. |language| image:: https://img.shields.io/github/languages/top/domdfcoding/webcolors-stubs
 	:alt: GitHub top language

@@ -50,7 +50,7 @@ pypi_name = "webcolors-stubs"
 import_name = "webcolors"
 py_modules = []
 entry_points = {
-		"console_scripts": []
+		"console_scripts": [],
 		}
 
 __license__ = "BSD License"

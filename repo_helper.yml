@@ -15,11 +15,7 @@ enable_conda: False
 enable_docs: False
 
 exclude_files:
-  - tox
   - rtfd
-  - setup
-  - manifest
-  - bumpversion
 
 python_deploy_version: 3.6
 
@@ -48,3 +44,5 @@ keywords:
   - webcolors
   - css
   - type-stubs
+
+stubs_package: True

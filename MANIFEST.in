@@ -2,5 +2,5 @@ include __pkginfo__.py
 include LICENSE
 include requirements.txt
 recursive-exclude **/__pycache__ *
-recursive-include webcolors-stubs/ *.pyi
+recursive-include webcolors-stubs *.pyi
 include webcolors-stubs/py.typed

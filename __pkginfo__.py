@@ -44,9 +44,9 @@ modname = "webcolors-stubs"
 pypi_name = "webcolors-stubs"
 import_name = "webcolors"
 __license__ = "BSD License"
-short_desc = "PEP 561 based Type information for webcolors."
-__author__ = author = "Dominic Davis-Foster"
-author_email = "dominic@davis-foster.co.uk"
+short_desc = 'PEP 561 based Type information for webcolors.'
+__author__ = author = 'Dominic Davis-Foster'
+author_email = 'dominic@davis-foster.co.uk'
 github_username = "domdfcoding"
 web = github_url = "https://github.com/domdfcoding/webcolors-stubs"
 repo_root = pathlib.Path(__file__).parent

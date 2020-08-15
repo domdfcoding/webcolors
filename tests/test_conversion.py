@@ -405,4 +405,4 @@ class ConversionTests(unittest.TestCase):
 				(webcolors.rgb_to_name, int_tuple),
 				(webcolors.rgb_percent_to_name, percent_tuple),
 				):
-				assert name == converter(value, spec=webcolors.CSS3)
+				assert name == converter(value, spec=webcolors.CSS3)  # type: ignore

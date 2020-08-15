@@ -59,7 +59,9 @@ class CSS21DefinitionTests(unittest.TestCase):
 				)
 		color_table = soup.find("div", attrs={"id": "TanteksColorDiagram20020613"})
 		for color_square in color_table.findAll("span", attrs={"class": "colorsquare"}):
-			color_name, color_value = self.color_matching_re.search(color_square.text).groups()
+			m = self.color_matching_re.search(color_square.text)
+			if m:
+				color_name, color_value = m.groups()
 			self.css21_colors[color_name] = color_value
 
 	def test_color_definitions(self):

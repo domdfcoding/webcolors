@@ -75,7 +75,7 @@ class HTML5Tests(unittest.TestCase):
 				("Window", (0, 13, 0)),
 				("RE|SXLuAse", (224, 0, 224)),
 				("+=@FnnWL!Yb}5Dk", (0, 0, 176)),
-				("A" * 129, (170, 170, 170)),
+				('A' * 129, (170, 170, 170)),
 				)
 		for raw, parsed in test_pairs:
 			result = webcolors.html5_parse_legacy_color(raw)
@@ -107,6 +107,6 @@ class HTML5Tests(unittest.TestCase):
 		Test error conditions of the HTML5 legacy color parsing algorithm.
 
 		"""
-		test_values = (b"#000000", "transparent", "")
+		test_values = (b"#000000", "transparent", '')
 		for value in test_values:
 			self.assertRaises(ValueError, webcolors.html5_parse_legacy_color, value)

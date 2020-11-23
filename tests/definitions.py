@@ -34,7 +34,7 @@ class HTML4DefinitionTests(unittest.TestCase):
 		for td in color_table.findAll("td"):
 			if "width" not in td.attrs:
 				color_name, color_value = td.text.split(" = ")
-				self.html4_colors[color_name] = color_value.replace('"', "").strip()
+				self.html4_colors[color_name] = color_value.replace('"', '').strip()
 
 	def test_color_definitions(self):
 		for color_name, color_value in self.html4_colors.items():
@@ -85,18 +85,18 @@ class CSS3DefinitionTests(unittest.TestCase):
 		color_names = [dfn.text for dfn in color_table.findAll("dfn")]
 		hex_values = [
 				td.text.strip()
-				for td in color_table.findAll("td", attrs={"class": "c", "style": "background:silver"})
-				if td.text.startswith("#")
+				for td in color_table.findAll("td", attrs={"class": 'c', "style": "background:silver"})
+				if td.text.startswith('#')
 				]
 		rgb_values = [
 				td.text.strip()
-				for td in color_table.findAll("td", attrs={"class": "c", "style": "background:silver"})
-				if not td.text.startswith("#") and not td.text.startswith("&") and td.text.strip()
+				for td in color_table.findAll("td", attrs={"class": 'c', "style": "background:silver"})
+				if not td.text.startswith('#') and not td.text.startswith('&') and td.text.strip()
 				]
 		for i, color_name in enumerate(color_names):
 			self.css3_colors[color_name] = {
 					"hex": hex_values[i],
-					"rgb": tuple(map(int, rgb_values[i].split(","))),
+					"rgb": tuple(map(int, rgb_values[i].split(','))),
 					}
 
 	def test_color_definitions(self):

@@ -17,7 +17,7 @@ webcolors-stubs
 	:widths: 10 90
 
 	* - Tests
-	  - |travis| |actions_windows| |actions_macos| |coveralls| |codefactor| |pre_commit_ci|
+	  - |travis| |actions_windows| |actions_macos| |codefactor| |pre_commit_ci|
 	* - PyPI
 	  - |pypi-version| |supported-versions| |supported-implementations| |wheel|
 	* - Activity
@@ -42,10 +42,6 @@ webcolors-stubs
 .. |requires| image:: https://requires.io/github/domdfcoding/webcolors-stubs/requirements.svg?branch=master
 	:target: https://requires.io/github/domdfcoding/webcolors-stubs/requirements/?branch=master
 	:alt: Requirements Status
-
-.. |coveralls| image:: https://img.shields.io/coveralls/github/domdfcoding/webcolors-stubs/master?logo=coveralls
-	:target: https://coveralls.io/github/domdfcoding/webcolors-stubs?branch=master
-	:alt: Coverage
 
 .. |codefactor| image:: https://img.shields.io/codefactor/grade/github/domdfcoding/webcolors-stubs?logo=codefactor
 	:target: https://www.codefactor.io/repository/github/domdfcoding/webcolors-stubs
